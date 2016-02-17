@@ -2,12 +2,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Artist {
-  private String mName;
   HashMap<String, Cd> mArtistCds;
+  private static ArrayList<Artist> artists = new ArrayList<Artist>();
+
+  private String mName;
 
   public Artist(String name) {
     mName = name;
     mArtistCds = new HashMap<String, Cd>();
+    artists.add(this);
   }
 
   public void addCd(Cd cd) {
@@ -18,4 +21,7 @@ public class Artist {
     return mArtistCds;
   }
 
+  public static ArrayList all() {
+    return artists;
+  }
 }

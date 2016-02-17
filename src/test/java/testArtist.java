@@ -30,6 +30,11 @@ public class testArtist {
 
   @Test
   public void all_returnsArtistArrayList() {
-    
+    Artist newArtist1 = new Artist("Elliott Smith");
+    Artist newArtist2 = new Artist("James Blake");
+    Artist newArtist3 = new Artist("Notwist");
+    assertEquals(true, Artist.all().contains(newArtist1));
+    assertEquals(true, Artist.all().contains(newArtist2));
+    assertEquals(true, Artist.all().contains(newArtist3));
   }
 }
