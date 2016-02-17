@@ -3,7 +3,7 @@ apply plugin: 'application'
 
 archivesBaseName = "insert-folder-name-here"
 version = '1.0'
-mainClassName = "insert-MainClass-here"
+mainClassName = "App"
 
 repositories {
   mavenCentral()
