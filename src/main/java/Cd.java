@@ -18,8 +18,8 @@ public class Cd {
     return cds;
   }
 
-  public static ArrayList sort() {
-    Cd [] cdArray = cds.toArray(new Cd[cds.size()]);
-    cdArray.sort()
-  }
+  // public static ArrayList sort() {
+  //   Cd [] cdArray = cds.toArray(new Cd[cds.size()]);
+  //   cdArray.sort()
+  // }
 }

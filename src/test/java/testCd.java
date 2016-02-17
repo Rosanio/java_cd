@@ -23,10 +23,10 @@ public class testCd {
     assertEquals(true, Cd.all().contains(newCd2));
   }
 
-  @Test
-  public void sort_returnsSortedArrayList() {
-    Cd newCd1 = new Cd("The Black Album");
-    Cd newCd2 = new Cd("OK, Computer");
-    assertEquals("The Black Album", Cd.all().get(1));
-  }
+  // @Test
+  // public void sort_returnsSortedArrayList() {
+  //   Cd newCd1 = new Cd("The Black Album");
+  //   Cd newCd2 = new Cd("OK, Computer");
+  //   assertEquals("The Black Album", Cd.all().get(1));
+  // }
 }
