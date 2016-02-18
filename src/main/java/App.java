@@ -1,5 +1,5 @@
 import java.util.HashMap;
-import java.util.ArrayList;
+import java.util.*;
 
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
@@ -76,13 +76,15 @@ public class App {
         Cd assigned = new Cd(cdName);
         artist.addCd(assigned);
         System.out.println(artist.viewCds().size());
-        ArrayList<String> artistCds = new ArrayList<String>();
-        for(Integer i = 1; i <= 2; i++) {
-          Cd tempCd = (Cd)artist.viewCds().get(i);
-          System.out.println("tempcd title?" + tempCd.getTitle());
-          artistCds.add(tempCd.getTitle());
+        Set cdValues = artist.viewCds().keySet();
+        Collection<Cd> cdCds = artist.viewCds().values();
+        ArrayList<Cd> artistCds = new ArrayList<Cd>(cdCds);
+        ArrayList<String> artistCdTitles = new ArrayList<String>();
+        for(Integer i = 1; i <= cdValues.size(); i++) {
+          System.out.println("tempcd title?" +artistCds.get(i-1).getTitle());
+          artistCdTitles.add(artistCds.get(i-1).getTitle());
         }
-        model.put("artistCds", artistCds);
+        model.put("artistCds", artistCdTitles);
       }
 
       else {
