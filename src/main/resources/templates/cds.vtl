@@ -1,0 +1,9 @@
+<h1>Your Cds</h1>
+
+<ul>
+#foreach($cd in $cds)
+  <li><a href="/home/cds/$cd.getId()">$cd.getTitle()<a></li>
+#end
+</ul>
+
+<a href="/home">Go home</a>

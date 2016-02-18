@@ -1,0 +1,10 @@
+<h1>Your Artists</h1>
+
+<ul>
+  #foreach($artist in $artists)
+  <li><a href="/home/artists/$artist.getId()">$artist.getName()</a></li>
+  #end
+</ul>
+
+
+<a href="/home">Go home</a>

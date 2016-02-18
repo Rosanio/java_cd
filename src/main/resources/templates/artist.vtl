@@ -1,0 +1,15 @@
+#if ($artist)
+  <h1>$artist.getName()</h1>
+#else
+  <h1>Artist not found</h1>
+#end
+
+<ul>
+  #foreach($cd in $artistCds)
+    <li>$cd</li>
+  #end
+</ul>
+
+<a href="/home/addArtist">Add another Artist</a>
+<a href="/home/artists/$artist.getId()/assign">Assign cd to artist</a>
+<a href="/home">Go home</a>
